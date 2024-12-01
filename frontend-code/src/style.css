@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Kanit", sans-serif !important;
+}
+
+#app {
+    font-family: "Kanit", sans-serif !important;
+}
+
+.ant-typography,
+.ant-btn,
+.ant-input,
+.ant-input-number,
+div,
+span {
+    font-family: "Kanit", sans-serif !important;
+}
+
+/* a tag  */
+a,
+a:hover,
+a:focus {
+    color: black;
+}
+.ant-btn-primary {
+    background-color: #8b3035 !important;
+    color: white !important;
+}.ant-btn-primary:hover {
+background-color: #b3484d !important;
+}
+/* ant list flex col css */
+.ant-list-item-extra {
+    margin-inline-start: 0px !important;
+}
+
+.ant-list-item-meta .ant-list-item-meta-avatar {
+    margin-inline-end: 0px !important;
+}
+
+/* sidebar box */
+.sidebar-box-item {
+    margin-bottom: 12px;
+    font-weight: normal;
+}
