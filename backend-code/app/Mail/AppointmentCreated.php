@@ -29,9 +29,7 @@ class AppointmentCreated extends Mailable
    */
   public function build()
   {
-    return $this->view('emails.appointment_created')
-      ->with([
-        'appointment' => $this->appointment,
-      ]);
+    return $this->html('<h1>Xin chào!</h1><p>Cuộc hẹn của bạn đã được tạo...</p>')
+        ->subject('Thông báo cuộc hẹn mới');
   }
 }

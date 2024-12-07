@@ -6,6 +6,7 @@ import { profileService } from "@api/ProfileService";
 import { patientAppointmentService } from "@api/PatientAppointmentService";
 import { useRoute, useRouter } from "vue-router";
 import auth from "../stores/auth";
+import crypto from "crypto-js";
 
 const route = useRoute();
 const router = useRouter();
@@ -113,7 +114,9 @@ const submit = async () => {
 			appointment: response.data.id,
 		},
 	});
-}
+};
+
+const deadline = Date.now() + 12 * 60 * 60 * 20 * 2;
 </script>
 
 <template>

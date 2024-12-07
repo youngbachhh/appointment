@@ -50,9 +50,9 @@ class AppointmentController extends Controller
             'is_insurance_covered' => 0,
         ]);
         
-        // if ($appointment) {
-        //     Mail::to($appointment->profile->email)->send(new AppointmentCreated($appointment));
-        // }
+        if ($appointment) {
+            Mail::to($appointment->profile->email)->send(new AppointmentCreated($appointment));
+        }
 
         return AppointmentResource::make($appointment);
     }

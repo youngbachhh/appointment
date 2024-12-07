@@ -11,6 +11,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TimeSlotController;
+use App\Http\Controllers\AppointmentPaymentController;
 use Illuminate\Support\Facades\Redis;
 
 /*
@@ -58,5 +59,9 @@ Route::group([
     Route::apiResource('appointments', AppointmentController::class);
 
     Route::apiResource('time-slots', TimeSlotController::class);    
+
+    Route::apiResource('appointment-payments', AppointmentPaymentController::class);
+    Route::get('appointment-payments/vnpay/{appointmentPaymentId}', [AppointmentPaymentController::class, 'vnpay']);
+    
 });
 

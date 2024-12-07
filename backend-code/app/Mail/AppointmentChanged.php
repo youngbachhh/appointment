@@ -19,7 +19,7 @@ class AppointmentChanged extends Mailable
 
     public function build()
     {
-        return $this->view('emails.appointment_changed')
-                    ->with(['message' => $this->message]);
+      return $this->html('<h1>Xin chào!</h1><p>Cuộc hẹn của bạn đã được điều chỉnh...</p>')
+      ->subject('Thông báo cuộc hẹn');
     }
 }
